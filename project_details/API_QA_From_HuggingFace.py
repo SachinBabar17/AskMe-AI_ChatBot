@@ -4,9 +4,8 @@ from dotenv import load_dotenv
 load_dotenv()
 API_URL = "https://router.huggingface.co/v1/chat/completions"
 headers = {
-    "Authorization": "",
+    "Authorization": "Bearer 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",
 }
-# print(headers)
 def query(payload):
     response = requests.post(API_URL, headers=headers, json=payload)
     return response.json()
