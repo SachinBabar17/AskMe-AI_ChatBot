@@ -8,12 +8,12 @@ load_dotenv()
 app = Flask(__name__)
 
 HF_API_URL = "https://router.huggingface.co/v1/chat/completions"
-HF_TOKEN = os.environ.get("HF_TOKEN")
-if not HF_TOKEN:
+HF = os.environ.get("HF_TOKEN")
+if not HF:
     raise ValueError("HF_TOKEN environment variable not set. Please set it in your .env file or environment.")
 
 HF_HEADERS = {
-    "Authorization": f"Bearer {HF_TOKEN}",
+    "Authorization": f"Bearer {HF}",
     "Content-Type": "application/json"
 }
 
