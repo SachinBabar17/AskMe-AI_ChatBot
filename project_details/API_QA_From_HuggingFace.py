@@ -5,7 +5,7 @@ load_dotenv()
 API_URL = "https://router.huggingface.co/v1/chat/completions"
 headers = {
     "Authorization": f"Bearer {os.environ.get('HF_TOKEN')}",
-    # "Authorization": f"Bearer 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",
+    #"Bearer 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"
 }
 # print(headers)
 def query(payload):
