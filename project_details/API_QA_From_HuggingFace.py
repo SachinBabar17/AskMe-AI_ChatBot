@@ -3,9 +3,8 @@ import requests
 from dotenv import load_dotenv
 load_dotenv()
 API_URL = "https://router.huggingface.co/v1/chat/completions"
-#"Bearer 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"
 headers = {
-    "Authorization": f"Bearer {os.environ.get('HF_TOKEN')}",
+    "Authorization": "",
 }
 # print(headers)
 def query(payload):
